@@ -197,6 +197,9 @@ class a {
 
 let app = document.querySelector("#app");
 // Create a new "Text Interface"
-let ti = new a(app, "Example Text Interface");
-let name = await ti.prompt("What is your name?");
-ti.output("Hello, " + name);
+let ti = new a(app, "Linux");
+ti.output("Welcome to the Linux distro. Guess your program!");
+let above10 = (ti.promptYesOrNo("Does your distro start with K and D?"));
+if (above10===1){
+  (ti.promptYesOrNo("THIS IS A PLACEHOLDER TO MAKE THE CODE COMMIT PROPERLY"));
+}
