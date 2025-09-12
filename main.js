@@ -6,12 +6,9 @@ let app = document.querySelector("#app");
 let ti = new TextInterface(app, "Linux Distro Guessing Game");
 ti.output("Welcome to the Linux distro Guessing Program!");
 ti.output("This program has a list of the 20 most well-known Linux distros.");
-ti.output("We apologize if your favorite is not on the list,");
-ti.output("but there's just too many to count.");
-ti.output("Please answer the following yes or no questions.");``
-let above10 = (ti.promptYesOrNo("Does your distro start with the letters K and D?"));
-if (above10===1){
-  let greaterThan5 = (ti.promptYesOrNo("THIS IS A PLACEHOLDER TO MAKE THE CODE COMMIT PROPERLY"));
+let above10 = await (ti.promptYesOrNo("Does your distro start with the letters K and D?"));
+if (above10===true){
+  let greaterThan5 = await (ti.promptYesOrNo("THIS IS A PLACEHOLDER TO MAKE THE CODE COMMIT PROPERLY"));
 } else {
   ti.output("THIS IS YET ANOTHER PIECE OF PLACEHOLDER TEXT. SORRY!");
 }
