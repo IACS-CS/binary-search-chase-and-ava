@@ -198,6 +198,7 @@ class a {
 let app = document.querySelector("#app");
 // Create a new "Text Interface"
 let ti = new a(app, "Linux Distro Guessing Game");
+
 let greaterThanD;
 let isDebian;
 let isFedora;
