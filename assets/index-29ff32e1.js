@@ -200,6 +200,7 @@ let app = document.querySelector("#app");
 let ti = new a(app, "Linux Distro Guessing Game");
 let greaterThanD;
 let isDebian;
+let isFedora;
 let no = false;
 ti.output("Welcome to the Linux distro Guessing Program!");
 ti.output("This program has a list of the 10 most well-known Linux distros.");
@@ -213,11 +214,14 @@ if (greaterThanF===true){
     }else {
       let isUbuntu = await ti.promptYesOrNo("Is your distro Ubuntu?");
       if (isUbuntu===true){
-        ti.output ("yay i did it lets goooo");
+        ti.output ("dude why are you using Ubuntu, go use Debian like a real linux user");
       }else {
-        let isFedora = await ti.promptYesOrNo("is your distro Fedora?");
-        if (isFedora===true){
+        let isLinuxMint = await ti.promptYesOrNo("is your distro Linux Mint?");
+        if (isLinuxMint===true){
           ti.output("yay i did it");
+        }if (isLinuxMint===false) {
+        no = true;
+        alert("Error 404: Distro Not Found. Continuing list...");
         }
       }
     }
@@ -231,10 +235,13 @@ if (greaterThanF===true){
         let isGentoo = await ti.promptYesOrNo("Is your distro Gentoo?");
         if (isGentoo===true){
           ti.output("yay i did it woooooooo");
+        }else {
+          no = true;
+          alert("alright, i give up. I'll ask about Arch since you seem like an Arch user.");
         }
       }
       }else {
-        await ti.promptYesOrNo("Is your distro Fedora?");
+        isFedora = await ti.promptYesOrNo("Is your distro Fedora?");
         }if (isFedora===true){
           ti.output("yayyy");
       }
@@ -250,9 +257,22 @@ if (greaterThanF===true){
     isDebian = await ti.promptYesOrNo("is your distro Debian?");
   }if (isDebian===true){
     ti.output ("yay I did it lets gooooooo");
-  }else {
+  } if (isDebian===false && isElementary===false){
     no = true;
     alert("no.");
+  }
+}else {
+  let isArch = await ti.promptYesOrNo("Is your distro Arch Linux?");
+  if (isArch===true){
+    ti.output("what are you doing on this webpage, go compile your kernel you nerd");
+  }else {
+    let isCatchyOS = await ti.promptYesOrNo("Is your distro CatchyOS?");
+    if (isCatchyOS===true){
+      ti.output("yay i did it lets gooooooo");
+    }else {
+      no = true;
+      alert("EXTREMELY LOUD INCORRECT BUZZER NOISE");
+    }
   }
 }
 if (no===false) ti.output("Thank you for playing! See you soon!!");
