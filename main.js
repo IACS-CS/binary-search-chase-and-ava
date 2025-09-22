@@ -8,7 +8,6 @@ let greaterThanD;
 let isDebian;
 let isFedora;
 let no = false;
-let isDistroGeneric;
 let isPlaying = true
 ti.output("Welcome to the Linux distro Guessing Program!");
 ti.output("This program has a list of the 10 most well-known Linux distros.");
@@ -71,10 +70,12 @@ while ((isPlaying === true)) {
       if (isFedora === true) {
         ti.output("YAY!!!");
         isPlaying = false;
+      } else {
+        no = true
+        alert("get out. I hate you.")
       }
     }
   } else {
-    isDistroGeneric = false;
     greaterThanD = await ti.promptYesOrNo(
       "Is your distro greater than or equal to the letter D?"
     );
@@ -82,25 +83,18 @@ while ((isPlaying === true)) {
   if (greaterThanD === true) {
     let isElementary = await ti.promptYesOrNo("Is your distro ElementaryOS");
     if (isElementary === true) {
-      isDistroGeneric = true;
       ti.output("Yay I did it lets gooooooo");
     } else {
       isDebian = await ti.promptYesOrNo("is your distro Debian?");
     }
     if (isDebian === true) {
-      isDistroGeneric = true;
       ti.output("Yay I did it lets gooooooo");
     }
     if (isDebian === false && isElementary === false) {
       no = true;
       alert("no.");
     }
-  } else {
-    if (
-      isDistroGeneric === false &&
-      greaterThanD === false &&
-      isFedora === false
-    );
+  } if (greaterThanD === false) {
     {
       let isArch = await ti.promptYesOrNo("Is your distro Arch Linux?");
       if (isArch === true) {
@@ -117,7 +111,7 @@ while ((isPlaying === true)) {
         }
       }
     }
-  }
-}
-if (no === false) ti.output("Thank you for playing! See you soon!!");
-if (no === true) ti.output("get out of here.");
+  } if (no === false) ti.output("Thank you for playing! See you soon!!");
+    if (no === true) ti.output("get out of here.");
+    isPlaying = await ti.promptYesOrNo("Would you like to play again?")
+} ti.output("Alright, cya later alligator")
