@@ -36,7 +36,7 @@ while ((isPlaying === true)) {
             "is your distro Linux Mint?"
           );
           if (isLinuxMint === true) {
-            ti.output("Yay I did it");
+            ti.output("Have fun being stuck on the X11 window manager you bum");
             isPlaying = false;
           }
           if (isLinuxMint === false) {
@@ -52,12 +52,12 @@ while ((isPlaying === true)) {
       if (greaterThanG === true) {
         let isKDE = await ti.promptYesOrNo("Is your distro KDE Neon?");
         if (isKDE === true) {
-          ti.output("Yay lets go, I did it");
+          ti.output("Have fun breaking your whole user interface with one setting change");
           isPlaying = false;
         } else {
           let isGentoo = await ti.promptYesOrNo("Is your distro Gentoo?");
           if (isGentoo === true) {
-            ti.output("Yay I did it woooooooo");
+            ti.output("Jesus Christ do you hate yourself that much?");
             isPlaying = false;
           } else {
             no = true;
@@ -68,7 +68,7 @@ while ((isPlaying === true)) {
         isFedora = await ti.promptYesOrNo("Is your distro Fedora?");
       }
       if (isFedora === true) {
-        ti.output("YAY!!!");
+        ti.output("Have fun using your scuffed package manager, APT is so much better.");
         isPlaying = false;
       } else {
         no = true
@@ -83,12 +83,12 @@ while ((isPlaying === true)) {
   if (greaterThanD === true) {
     let isElementary = await ti.promptYesOrNo("Is your distro ElementaryOS");
     if (isElementary === true) {
-      ti.output("Yay I did it lets gooooooo");
+      ti.output("You don't even know what a termial is. Stop using Linux");
     } else {
       isDebian = await ti.promptYesOrNo("is your distro Debian?");
     }
     if (isDebian === true) {
-      ti.output("Yay I did it lets gooooooo");
+      ti.output("Good choice, Debian is clearly the best distro ever.");
     }
     if (isDebian === false && isElementary === false) {
       no = true;
@@ -104,7 +104,7 @@ while ((isPlaying === true)) {
       } else {
         let isCatchyOS = await ti.promptYesOrNo("Is your distro CatchyOS?");
         if (isCatchyOS === true) {
-          ti.output("Yay I did it lets gooooooo");
+          ti.output("You're probably just following trends, go use something else you nerd.");
         } else {
           no = true;
           alert("EXTREMELY LOUD INCORRECT BUZZER NOISE");
