@@ -265,6 +265,9 @@ while ((isPlaying === true)) {
       if (isFedora === true) {
         ti.output("YAY!!!");
         isPlaying = false;
+      } else {
+        no = true;
+        alert("get out. I hate you.");
       }
     }
   } else {
@@ -286,7 +289,7 @@ while ((isPlaying === true)) {
       no = true;
       alert("no.");
     }
-  } else {
+  } if (greaterThanD === false) {
     {
       let isArch = await ti.promptYesOrNo("Is your distro Arch Linux?");
       if (isArch === true) {
@@ -303,7 +306,7 @@ while ((isPlaying === true)) {
         }
       }
     }
-  }
-}
-if (no === false) ti.output("Thank you for playing! See you soon!!");
-if (no === true) ti.output("get out of here.");
+  } if (no === false) ti.output("Thank you for playing! See you soon!!");
+    if (no === true) ti.output("get out of here.");
+    isPlaying = await ti.promptYesOrNo("Would you like to play again?");
+} ti.output("Alright, cya later alligator");
